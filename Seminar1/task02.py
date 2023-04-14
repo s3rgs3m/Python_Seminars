@@ -3,7 +3,7 @@
 #100 -> 1 (1 + 0 + 0)
 
 num = input('Введите трехзначное число: ')
-if len(num)!=3 or int(num)==0:
+if len(num)!=3 or num.isdigit()==False:
     print('Неверно введено число!')
 else:
     print(int(num[0])+int(num[1])+int(num[2]))
