@@ -10,8 +10,8 @@
 import random
 n = int(input("Введите N: "))
 a = []
-for i in range(0, n):
+for i in range(0, n):   # генерируем случайный массив с числами от 0 до 9
     a.append( random.randint(0,9))
 print("Массив A:" + str(a))
 x = int (input ("Введите Х: "))
-print (a.count(x))
+print ("Кол-во числа "+str(x)+ " в массиве А равно " + str(a.count(x)))
