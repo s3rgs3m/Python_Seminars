@@ -7,3 +7,11 @@
 # 1 2 3 4 5
 # 3
 # -> 1
+import random
+n = int(input("Введите N: "))
+a = []
+for i in range(0, n):
+    a.append( random.randint(0,9))
+print("Массив A:" + str(a))
+x = int (input ("Введите Х: "))
+print (a.count(x))
