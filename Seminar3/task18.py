@@ -7,3 +7,19 @@
 # 1 2 3 4 5
 # 6
 # -> 5
+
+import random
+n = int(input("Введите длину массива: "))
+a = []
+for i in range(0, n):   # генерируем случайный массив с числами от 0 до 9
+    a.append( random.randint(0,9))
+print("Массив A:" + str(a))
+x = int (input ("Введите Х: "))
+a.sort()
+
+for i in range (n-1,-1,-1):
+    if a[i]<=x:
+        y = a[i]
+        break
+
+print ("Самое близкое число к "+str(x)+ " в массиве А - это " + str(y))
