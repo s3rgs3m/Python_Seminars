@@ -10,6 +10,8 @@ def pwr(a : int, b: int):
     for i in range(0,b):
         result *= a
     return result
+
 a = int(input("Введите A: "))
 b = int(input("Введите B: "))
+
 print("A^B: "+ str(pwr(a,b)))
