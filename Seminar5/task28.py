@@ -1,15 +1,19 @@
 '''
-
+Задача 28: Напишите рекурсивную функцию sum(a, b),
+возвращающую сумму двух целых неотрицательных чисел. Из
+всех арифметических операций допускаются только +1 и -1.
+Также нельзя использовать циклы.
+2,2 -> 4
 '''
+def sum(a: int, b: int):
+    res = 0
+    if b == 1:
+        res = a + 1
+    else:
+        res = sum(a+1, b-1)
+    return res
 
-n = int(input("Введите кол-во кустов: "))
-a = []
-for i in range (0,n):
-    a.append(int(input("Введите ягоды на "+ str(i+1)+ " кусте: ")))
+a = int(input("Введите A: "))
+b = int(input("Введите B: "))
 
-print (a)
-berry=[]
-berry.append(a[0]+a[n-1]+a[1])
-for i in range (1,n-1):
-    berry.append(a[i-1]+a[i]+a[i+1])
-print ("Можно собрать максимум: " + str((max(berry))))
+print("A+B: "+ str(sum(a,b)))
