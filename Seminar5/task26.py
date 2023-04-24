@@ -7,8 +7,10 @@ A = 2; B = 3 -> 8
 
 def pwr(a : int, b: int):
     result = 1
-    for i in range(0,b):
-        result *= a
+    if b == 1:
+        result = a
+    else:
+        result = a * pwr(a,b-1)
     return result
 
 a = int(input("Введите A: "))
