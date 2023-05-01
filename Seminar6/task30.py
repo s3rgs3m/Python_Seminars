@@ -8,3 +8,11 @@
 Ввод: 7 2 5
 Вывод: 7 9 11 13 15
 '''
+a1 = int(input("Введите 1й элемент: "))
+d = int(input("Введите разность: "))
+n = int(input("Введите N-й элемент: "))
+
+arr=[]
+for i in range(n):
+    arr.append(a1+i*d)
+print (arr)
