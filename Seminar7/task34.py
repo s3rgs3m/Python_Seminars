@@ -11,3 +11,25 @@
 Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам 
 Вывод: Парам пам-пам
 '''
+
+def vovels_count(in_str : str):
+    cnt = 0
+    for i, char in enumerate(in_str,0):
+        if str.lower(char) in 'аеёиоуыэюя':
+            cnt += 1
+    return cnt
+
+
+poem = input("Введите стих: ")
+
+if not poem: 
+    poem="пара-ра-рам рам-пам-папам па-ра-па-дам"
+
+lst = list(map(vovels_count, poem.split()))
+
+#print(lst)
+
+if all(cnt == lst[0] for cnt in lst):
+    print("Парам пам-пам")
+else:
+    print("Пам парам")
